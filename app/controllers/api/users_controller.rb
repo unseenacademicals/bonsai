@@ -59,7 +59,7 @@ class API::UsersController < ApplicationController
     private
         
     def user_params
-        params.require(:user).permit(:acclaim_id, :latitude, :longitude)
+        params.require(:user).permit(:name, :acclaim_id, :latitude, :longitude)
     end
 
     def error_render
