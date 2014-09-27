@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140927043515) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "employers", force: true do |t|
     t.string   "name"
     t.decimal  "latitude"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140927043515) do
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "employer_id"
-    t.text     "badges"
+    t.text     "badges",      array: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
