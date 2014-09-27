@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
     
     root 'welcome#index'
-    get '/newuser' => 'welcome#newuser'
-    get '/newemployer' => 'welcome#newemployer'
-    get '/newemployer/:id/newrole' => 'welcome#newrole'
+    #get '/newuser' => 'welcome#newuser'
+    #get '/newemployer' => 'welcome#newemployer'
+    #get '/newemployer/:id/newrole' => 'welcome#newrole'
+    
+    resources :employers do
+        resources :roles
+    end
     
     namespace :api do
         get '/users/near/:lat/:lng' => 'users#nearby', :lat => /.*/, :lng => /.*/

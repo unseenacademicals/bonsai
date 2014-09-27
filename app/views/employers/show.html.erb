@@ -1,0 +1,13 @@
+<h1 id="page-heading"><%= @employer.name %></h1>
+
+Location: <a href="https://www.google.com/maps/place/<%= @employer.latitude %>+<%= @employer.longitude %>"><%= @employer.latitude %>, <%= @employer.longitude %></a>
+
+<div id="employer-list">
+<%= render @employer.roles %>
+</div>
+
+<br><%= link_to 'New Role', new_employer_role_path(@employer) %><br>
+
+<p id="admin-controls">
+    <%= link_to 'Edit Employer', edit_employer_path(@employer) %>
+</p>
