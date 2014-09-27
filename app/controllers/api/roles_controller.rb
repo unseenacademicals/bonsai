@@ -26,7 +26,7 @@ class API::RolesController < ApplicationController
         @role = Role.find(params[:id])
         
         if(@role.update(role_params))
-            redirect_to api_employer_role_path(@employer, @role)
+            render :json => {:success => "Successfully updated role"}
         else
             render :json => {:error => "Role failed to update"}
         end

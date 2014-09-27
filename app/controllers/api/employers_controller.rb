@@ -25,7 +25,7 @@ class API::EmployersController < ApplicationController
         @employer = Employer.find(params[:id])
         
         if(@employer.update(employer_params))
-            redirect_to api_employer_path(@employer)
+            render :json => {:success => "Successfully updated employer"}
         else
             render :json => {:error => "Employer failed to update"}
         end

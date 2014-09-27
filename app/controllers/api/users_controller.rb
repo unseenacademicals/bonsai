@@ -24,7 +24,7 @@ class API::UsersController < ApplicationController
         @user = User.find(params[:id])
         
         if(@user.update(user_params))
-            api_user_path(@user)
+            render :json => {:success => "Successfully updated user"}
         else
             render :json => {:error => "User failed to update"}
         end
