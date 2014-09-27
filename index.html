@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BadgeLife</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            body{
+                background-color: lightgray;
+                text-align: center;
+            }
+            form{
+                text-align: center;
+            }
+            button{
+                alignment-adjust: central;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">User Login</div>
+        <form action="">
+            <input type="radio" name="proType" id="User">User
+            <input type="radio" name="proType" id="Employer">Employer<br>
+        </form>
+        <form>
+             User ID:  <input type="text" name="username"><br>
+            Password: <input type="password" name="pwd"><br>
+        </form>
+        <button name="myButton" onClick="return reDirect()">Login</button>
+        
+        <script>
+            $type = document.p
+            $.post("https://sandbox.youracclaim.com/api/v1",application/json,null,application/json);
+        function reDirect(){
+            var x = document.getElementById("User").checked;
+            if(x===true){
+                window.location = "home.html";
+            }
+            else{
+                window.location = "employer.html";
+            }
+        }
+        </script>
+    </body>
+</html>

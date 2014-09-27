@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    <style>
+    #header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    }
+    #nav{
+    line-height: 30px;
+    background-color: lightgoldenrodyellow;
+    height: 500px;
+    width: 100px;
+    float: left;
+    padding: 5px;
+    }
+    #attributes {
+        text-align: left;
+    }
+    #image {
+        text-align: right;
+    }
+    #badge{
+        text-align: center;
+    }
+    body{
+        background-color: lightgray;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="header">
+        <h1>Welcome</h1>
+        </div>
+        <div id="nav">
+            <button name="feed" onclick="return homePage()">feed</button><button name="logout" onclick="return logOut()">logout</button>         
+        </div>
+        <div id="image">
+            <div id="attributes">
+            <h3>Name</h3>
+            <h3>University:</h3>
+            <h3>Location:</h3>
+            </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT07vGtArybOqBuobhb8OWQLgmJl5QnTFyDQl_bLZ7wug_OynLl">
+        </div>
+        <div id="badge">
+            <h2>Badges</h2>
+        </div>
+        <script>
+         function homePage(){
+             window.location = "feed.html";
+         }
+         function logOut(){
+             window.location= "index.html";
+         }
+         
+        </script>
+    </body>
+</html>
