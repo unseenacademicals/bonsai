@@ -40,4 +40,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'thin'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
