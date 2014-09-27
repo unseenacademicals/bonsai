@@ -37,6 +37,11 @@ class API::UsersController < ApplicationController
         redirect_to users_path
     end
     
+    def acclaim
+        @user = User.find_by_acclaim_id(params[:acclaim_id])
+        render :json => @user
+    end
+    
     def nearby
         lat, lng = params[:lat], params[:lng]
         if lat and lng

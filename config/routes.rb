@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     
     namespace :api do
         get '/users/near/:lat/:lng' => 'users#nearby', :lat => /.*/, :lng => /.*/
+        get '/users/by-acclaim/:acclaim_id' => 'users#acclaim'
         resources :users
         get '/employers/near/:lat/:lng' => 'employers#nearby', :lat => /.*/, :lng => /.*/
         resources :employers do
