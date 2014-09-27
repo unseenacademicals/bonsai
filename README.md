@@ -10,6 +10,7 @@ BONSAI
 * Update: PATCH /api/users/{id}
 * Delete: DELETE /api/users/{id}
 * Get nearby users: GET /api/nearby/users/{latitude}/{longitude}
+* Get by Acclaim ID: GET /api/users/by-acclaim/{acclaim-id}
 
 ###Employers
 * Index:  GET /api/employers/

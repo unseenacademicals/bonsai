@@ -39,7 +39,11 @@ class API::UsersController < ApplicationController
     
     def acclaim
         @user = User.find_by_acclaim_id(params[:acclaim_id])
-        render :json => @user
+        if(@user)
+            render :json => @user
+        else
+            render :json => {:error => "User does not exist"}
+        end
     end
     
     def nearby
