@@ -1,4 +1,4 @@
-class Api::UsersController < ApplicationController
+class API::UsersController < ApplicationController
     #rescue_from Exception, :with => :error_render
 
     def index
