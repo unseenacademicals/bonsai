@@ -9,7 +9,7 @@ class API::RolesController < ApplicationController
     
     def create
         @employer = Employer.find(params[:employer_id])
-        @role = Role.create(role_params)
+        @role = @employer.roles.create(role_params)
         if (@role.save)
             redirect_to api_employer_role_path(@employer, @role)
         else
@@ -42,7 +42,7 @@ class API::RolesController < ApplicationController
     private
         
     def role_params
-        params.require(:role).permit(:name, :badges)
+        params.require(:role).permit(:name, badges: [])
     end
 
     def error_render
