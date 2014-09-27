@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     
     namespace :api do
         resources :users
-        resources :employers
+        resources :employers do
+            resources :roles
+        end
     end
 end

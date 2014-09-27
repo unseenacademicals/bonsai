@@ -39,7 +39,7 @@ class API::EmployersController < ApplicationController
     private
         
     def employer_params
-        params.require(:user).permit(:name, :badges, :latitude, :longitude)
+        params.require(:employer).permit(:name, :latitude, :longitude, :roles)
     end
 
     def error_render
