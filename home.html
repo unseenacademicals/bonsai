@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <div id="header">
+            <button name="feed" onclick="return homePage()">feed</button><button name="logout" onclick="return logOut()">logout</button>
+            
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT07vGtArybOqBuobhb8OWQLgmJl5QnTFyDQl_bLZ7wug_OynLl">
+        <h2> Badges </h2>
+        <script>
+         function homePage(){
+             window.location = "feed.html";
+         }
+         function logOut(){
+             window.location= "index.html";
+         }
+        </script>
+    </body>
+</html>
