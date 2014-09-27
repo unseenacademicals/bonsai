@@ -36,6 +36,16 @@ class API::UsersController < ApplicationController
         redirect_to users_path
     end
     
+    def nearby
+        lat, lng = params[:lat], params[:lng]
+        if lat and lng
+            @users = User.nearby(lat.to_f, lng.to_f)
+            render :json => @users
+        else
+            render :json => {:error => "Invalid or missing lat,lng parameters"}
+        end
+    end
+        
     private
         
     def user_params

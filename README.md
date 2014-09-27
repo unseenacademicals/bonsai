@@ -9,12 +9,14 @@ BONSAI
 * Create: POST /api/users/
 * Update: PATCH /api/users/{id}
 * Delete: DELETE /api/users/{id}
+* Get nearby users: GET /api/nearby/users/{latitude}/{longitude}
 
 ###Employers
 * Index:  GET /api/employers/
 * Create: POST /api/employers/
 * Update: PATCH /api/employers/{id}
 * Delete: DELETE /api/employers/{id}
+* Get nearby employers: GET /api/nearby/employers/{latitude}/{longitude}
 
 ###Roles
 * Index:  GET /api/employers/{emp-id}/roles

@@ -36,6 +36,16 @@ class API::EmployersController < ApplicationController
         redirect_to users_path
     end
     
+    def nearby
+        lat, lng = params[:lat], params[:lng]
+        if lat and lng
+            @employers = Employer.nearby(lat.to_f, lng.to_f)
+            render :json => @employers
+        else
+            render :json => {:error => "Invalid or missing lat,lng parameters"}
+        end
+    end
+    
     private
         
     def employer_params
