@@ -1,0 +1,23 @@
+<h1 id="page-heading">Edit role</h1>
+
+<%= form_for [@employer, @role] do |f| %>
+
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    <%= f.label :"badges" %><br>
+    <input type="text" id="badge1" name="role[badges]" multiple=true size="20" value="<%= @role.badges[0] %>" /><br>
+    <input type="text" id="badge2" name="role[badges]" multiple=true size="20" value="<%= @role.badges[1] %>" /><br>
+    <input type="text" id="badge3" name="role[badges]" multiple=true size="20" value="<%= @role.badges[2] %>" /><br>
+    <input type="text" id="badge4" name="role[badges]" multiple=true size="20" value="<%= @role.badges[3] %>" /><br>
+    <input type="text" id="badge5" name="role[badges]" multiple=true size="20" value="<%= @role.badges[4] %>" /><br>
+</p>
+
+    <%= f.submit :"Update Role" %>
+<% end %>
+
+
+<%= link_to 'Back', employer_path(@employer) %>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :employers do
         resources :roles
     end
+        
     
     namespace :api do
         get '/users/near/:lat/:lng' => 'users#nearby', :lat => /.*/, :lng => /.*/

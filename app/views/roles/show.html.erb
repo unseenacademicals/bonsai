@@ -1,0 +1,25 @@
+<div id="eventbox">
+    <div id="gallery">
+        <% @event.assets.each do |asset| %>
+            <div class="asset">
+                <a href="<%= asset.attachment.url(:original) %>"><img src="<%= asset.attachment.url(:thumb) %>"></a>
+            </div>
+        <% end %>
+    </div>
+    
+    <p id="event_description">
+        <%= @event.description %><br>
+        <%= link_to 'Link', @event.link %>
+    </p>
+    
+    Created: <%= @event.postdate.to_formatted_s(:short) %><br>
+    Updated: <%= @event.updated_at.to_formatted_s(:short) %><br>
+    Location: <a href="https://www.google.com/maps/place/<%= @event.latitude %>+<%= @event.longitude %>"><%= @event.latitude %>, <%= @event.longitude %></a>
+</div>
+
+<p id="admin-controls">
+    <%= link_to 'Edit', edit_trail_event_path(@event.trail_id, @event) %> | 
+    <%= link_to 'Delete', trail_event_path(@event.trail_id, @event), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br><br>
+    <%= link_to Trail.find(@event.trail_id).title, trail_path(@event.trail_id) %>
+</p>
