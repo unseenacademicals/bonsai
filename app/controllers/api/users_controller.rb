@@ -1,6 +1,7 @@
 class API::UsersController < ApplicationController
     #rescue_from Exception, :with => :error_render
-
+    skip_before_filter  :verify_authenticity_token
+    
     def index
         render :json => User.all
     end

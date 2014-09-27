@@ -1,5 +1,6 @@
 class API::RolesController < ApplicationController
     #rescue_from Exception, :with => :error_render
+    skip_before_filter  :verify_authenticity_token
 
     def index
         @employer = Employer.find(params[:employer_id])
