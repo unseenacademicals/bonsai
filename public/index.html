@@ -35,6 +35,18 @@ and open the template in the editor.
         <button name="myButton" onClick="return reDirect()">Login</button>
         
         <script>
+        function acclaimAPIrequest(resource) {
+            // ORGANIZATION ID: 41dd84f5-e826-4e17-a819-14b6af8bdb1f
+            $auth = "REPLACE WITH AUTH TOKEN";
+            $b64enc=base64encode($auth);
+            $b64enc=btoa($auth);
+            $req = {"Authorization" => "Basic " + $b64enc
+            
+            $.post("https://sandbox.youracclaim.com/api/v1" + resource, req, function handleAPIrequest(data, status, xhr) {
+                //handle API data here!
+            })
+        }
+        
             $type = document.p
             $.post("https://sandbox.youracclaim.com/api/v1",application/json,null,application/json);
         function reDirect(){
