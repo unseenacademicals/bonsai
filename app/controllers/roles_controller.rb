@@ -1,4 +1,10 @@
 class RolesController < ApplicationController
+    
+    def new
+        @employer = Employer.find(params[:employer_id])
+        @role = @employer.roles.new
+    end
+        
     def index
         @employer = Employer.find(params[:employer_id])
         @roles = @employer.roles

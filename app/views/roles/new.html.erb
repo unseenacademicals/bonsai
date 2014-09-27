@@ -1,31 +1,24 @@
-<h1 id="page-heading">New event</h1>
+<h1 id="page-heading">New role</h1>
 
-<%= render 'err' %>
-
-<%= form_for [@trail, @event] do |f| %>
+<%= form_for [@employer, @role] do |f| %>
 
 <p>
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
 </p>
 
 <p>
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
+    <%= f.label :"badges" %><br>
+    <%= f.text_field :badges, multiple: true %><br>
+    <%= f.text_field :badges, multiple: true %><br>
+    <%= f.text_field :badges, multiple: true %><br>
+    <%= f.text_field :badges, multiple: true %><br>
+    <%= f.text_field :badges, multiple: true %><br>
 </p>
 
-<p>
-    <%= f.label :link %><br>
-    <%= f.text_field :link %>
-</p>
-
-<p>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-</p>
-
-    <%= f.submit %>
+    <%= f.submit :"Create Role" %>
 <% end %>
 
-<%= link_to 'Back', trails_path(current_user) %>
+
+<%= link_to 'Back', employer_path(@employer) %>
 

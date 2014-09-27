@@ -8,6 +8,10 @@ class EmployersController < ApplicationController
         @employer = Employer.new
     end
     
+    def edit
+        @employer = Employer.find(params[:id])
+    end
+    
     def create
         @employer = Employer.create(employer_params)
         if (@employer.save)
