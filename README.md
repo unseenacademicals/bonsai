@@ -23,3 +23,8 @@ BONSAI
 * Create: POST /api/employers/{emp-id}/roles
 * Update: PATCH /api/employers/{emp-id}/roles/{role-id}
 * Delete: DELETE /api/employers/{emp-id}/roles/{role-id}
+
+###Skeleton database entry forms
+* http://bonsaibadge.herokuapp.com/newuser
+* http://bonsaibadge.herokuapp.com/newemployer
+* http://bonsaibadge.herokuapp.com/newemployer/{emp-id}/newrole

@@ -10,7 +10,7 @@ class API::EmployersController < ApplicationController
     def create
         @employer = Employer.create(employer_params)
         if (@employer.save)
-            redirect_to @employer
+            redirect_to api_employer_path(@employer)
         else
             render :json => {:error => "Employer failed to save."}
         end
@@ -25,7 +25,7 @@ class API::EmployersController < ApplicationController
         @employer = Employer.find(params[:id])
         
         if(@employer.update(employer_params))
-            redirect_to @employer
+            redirect_to api_employer_path(@employer)
         else
             render :json => {:error => "Employer failed to update"}
         end

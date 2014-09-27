@@ -9,7 +9,7 @@ class API::UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         if (@user.save)
-            redirect_to @user
+            redirect_to api_user_path(@user)
         else
             render :json => {:error => "User failed to save."}
         end
@@ -24,7 +24,7 @@ class API::UsersController < ApplicationController
         @user = User.find(params[:id])
         
         if(@user.update(user_params))
-            redirect_to @user
+            api_user_path(@user)
         else
             render :json => {:error => "User failed to update"}
         end

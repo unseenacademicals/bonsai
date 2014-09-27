@@ -1,0 +1,17 @@
+<h1>New role</h1>
+
+<%= form_for [@employer, @role], url: api_employer_roles_path(@employer) do |f| %>
+
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+</p>
+<p>
+    <%= f.label :"id list of badges" %><br>
+    <%= f.text_field :badges %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+<% end %>

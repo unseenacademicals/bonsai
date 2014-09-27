@@ -11,7 +11,7 @@ class API::RolesController < ApplicationController
         @employer = Employer.find(params[:employer_id])
         @role = Role.create(role_params)
         if (@role.save)
-            redirect_to @role
+            redirect_to api_employer_role_path(@employer, @role)
         else
             render :json => {:error => "Role failed to save."}
         end
@@ -26,7 +26,7 @@ class API::RolesController < ApplicationController
         @role = Role.find(params[:id])
         
         if(@role.update(role_params))
-            redirect_to @role
+            redirect_to api_employer_role_path(@employer, @role)
         else
             render :json => {:error => "Role failed to update"}
         end
