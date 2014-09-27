@@ -1,15 +1,16 @@
-<h1 id="page-heading">employers</h1>
+<h1 id="page-heading">Employers</h1>
 
 <div>
     <% @employers.each do |employer| %>
         <div class="employer-box">
             <div class="employer-box-text">
                 <b><%= link_to employer.name, employer_path(employer) %></b></br>
-                Location: <a href="https://www.google.com/maps/place/<%= employer.latitude %>+<%= employer.longitude %>"><%= employer.latitude %>, <%= employer.longitude %></a>
+                Location: <a href="https://www.google.com/maps/place/<%= employer.latitude %>+<%= employer.longitude %>"><%= employer.latitude %>, <%= employer.longitude %></a><br>
                 <%= link_to 'Edit', edit_employer_path(employer) %> | 
                 <%= link_to 'Delete', employer_path(employer), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div><br>
     <% end %>
 </div>
 
-<%= link_to 'new employer', new_employer_path %>
+<%= link_to 'Register Employer', new_employer_path %><br>
+<%= link_to 'Home', root_path %>
