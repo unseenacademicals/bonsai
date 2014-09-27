@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acclaim-id: MyString
+  latitude: 
+  longitude: 
+
+two:
+  acclaim-id: MyString
+  latitude: 
+  longitude: 
